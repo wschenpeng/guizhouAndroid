@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/fengji_close"
+        >
+        <WebView
+            android:id="@+id/webview"
+            android:layout_marginLeft="@dimen/dp2"
+            android:layout_marginRight="@dimen/dp2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </WebView>
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/fengji_close"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp10"
+        android:src="@drawable/ptz_false_press_off"
+        />
+
+
+</RelativeLayout>

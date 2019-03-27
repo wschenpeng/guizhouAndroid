@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.wzy.guizhouandroid.activity.Fodder_Activity">
+
+
+    <!-- titlebar 标题 -->
+    <RelativeLayout
+        android:id="@+id/titlebar"
+        style="@style/mainTitle"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="100dp"
+            android:layout_height="fill_parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/icon_back_round"
+            />
+
+        <TextView
+            android:id="@+id/video_set"
+            android:layout_width="@dimen/dp100"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titlebar">
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+        </WebView>
+
+    </RelativeLayout>
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/float_stable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        app:fab_addButtonColorNormal="#33A1C9"
+        app:fab_addButtonColorPressed="#25718C"
+        app:fab_expandDirection="up"
+        app:fab_labelStyle="@style/menu_sons_style"
+        app:fab_labelsPosition="left">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#06644E"
+            app:fab_colorPressed="#054C3B"
+            app:fab_icon="@drawable/icon_pen"
+            app:fab_size="mini"
+            />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/demand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="#06644E"
+            app:fab_colorPressed="#054C3B"
+            app:fab_icon="@drawable/icon_demand"
+            app:fab_size="mini"
+             />
+
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+
+</RelativeLayout>

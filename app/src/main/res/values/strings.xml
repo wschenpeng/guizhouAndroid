@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">贵州生猪养殖系统</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="version">1.0.0</string>
+</resources>

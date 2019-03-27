@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+
+    <RelativeLayout
+        android:id="@+id/L1"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/identify_background"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/data_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="监测点："
+            android:textColor="@color/identify_wordcolor"
+            />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/play"
+        android:layout_width="fill_parent"
+        android:layout_height="300dp">
+
+        <RelativeLayout
+            android:id="@+id/widget_Play"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <!-- 加载视频页面 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+
+                <SurfaceView
+                    android:id="@+id/Sur_Player"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="48dp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/icon_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/icon_video_play"
+                android:visibility="gone"/>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:visibility="gone">
+
+        <WebView
+            android:id="@+id/Wb_test"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </WebView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/L2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/L1"
+        android:background="@color/identify_background"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/data_time"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="当前数据时间：2018.10.18"
+            android:textColor="@color/identify_wordcolor" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/lineartext"
+                android:layout_marginTop="5dp"
+                >
+                <TextView
+                    style="@style/textlableqx"
+                    android:text="空气温度"
+                    />
+                <TextView
+                    android:id="@+id/air_temp"
+                    style="@style/textlableqx"
+                    android:text="---"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/lineartext"
+                android:layout_marginTop="5dp"
+                >
+                <TextView
+                    style="@style/textlableqx"
+                    android:text="空气湿度"
+                    />
+                <TextView
+                    android:id="@+id/air_humidity"
+                    style="@style/textlableqx"
+                    android:text="---"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/lineartext"
+                android:layout_marginTop="5dp"
+                >
+                <TextView
+                    style="@style/textlableqx"
+                    android:text="光照强度"
+                    />
+                <TextView
+                    android:id="@+id/illuminance"
+                    style="@style/textlableqx"
+                    android:text="---"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/lineartext"
+                android:layout_marginTop="5dp"
+                >
+                <TextView
+                    style="@style/textlableqx"
+                    android:text="氨氮1"
+                    />
+                <TextView
+                    android:id="@+id/NH3_1"
+                    style="@style/textlableqx"
+                    android:text="---"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/lineartext"
+                android:layout_marginTop="5dp"
+                >
+                <TextView
+                    style="@style/textlableqx"
+                    android:text="氨氮2"
+                    />
+                <TextView
+                    android:id="@+id/NH3_2"
+                    style="@style/textlableqx"
+                    android:text="---"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/lineartext"
+                android:layout_marginTop="5dp"
+                >
+                <TextView
+                    style="@style/textlableqx"
+                    android:text="氨氮3"
+                    />
+                <TextView
+                    android:id="@+id/NH3_3"
+                    style="@style/textlableqx"
+                    android:text="---"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/lineartext"
+                android:layout_marginTop="5dp"
+                >
+                <TextView
+                    style="@style/textlableqx"
+                    android:text="氨氮4"
+                    />
+                <TextView
+                    android:id="@+id/NH3_4"
+                    style="@style/textlableqx"
+                    android:text="---"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/lineartext"
+                android:layout_marginTop="5dp"
+                >
+                <TextView
+                    style="@style/textlableqx"
+                    android:text="氨氮5"
+                    />
+                <TextView
+                    android:id="@+id/NH3_5"
+                    style="@style/textlableqx"
+                    android:text="---"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.wzy.guizhouandroid.activity.Main_Grow_Activity">
+
+    <!-- titlebar 标题 -->
+    <RelativeLayout
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#33A1C9">
+
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="100dp"
+            android:layout_height="fill_parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/icon_back_round" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/icon_save" />
+
+        <TextView
+            android:id="@+id/Save"
+            android:layout_width="@dimen/dp100"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/L2"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/titlebar"
+        >
+
+
+        <gr.escsoft.michaelprimez.searchablespinner.SearchableSpinner
+            android:id="@+id/batch_number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            app:RevealEmptyText="请选择批次号..."
+            app:RevealViewBackgroundColor="#10000000"
+            />
+
+        <gr.escsoft.michaelprimez.searchablespinner.SearchableSpinner
+            android:id="@+id/grow_stage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:RevealEmptyText="请选择生长期..."
+            android:gravity="center"
+            app:RevealViewBackgroundColor="#10000000"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/camera"
+        />
+
+    <LinearLayout style="@style/fillstyle"
+        android:layout_below="@id/L2"
+        android:layout_marginTop="@dimen/dp40">
+
+        <include
+            android:id="@+id/include_image"
+            layout="@layout/grow_include_image"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

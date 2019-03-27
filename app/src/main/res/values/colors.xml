@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#50000000</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="hui1">#888888</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="green">#00FF00</color>
+    <color name="darkgreen">#33AA55</color>
+    <color name="lightgreen">#7CFC00</color>
+    <color name="lightgreen2">#11CC22</color>
+    <color name="red">#FF0000</color>
+    <color name="blue">#0000FF</color>
+    <color name="hui">#AAAAAA</color>
+    <color name="golden">#FFC000</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="gray">#F2F2F2</color>
+    <color name="hello_chart_line_blue">#5E8BDF </color>
+    <color name="skyblue">#0080ff </color>
+    <color name="lightblue">#00B0ff </color>
+    <color name="lightblue_hover">#0298D8 </color>
+    <color name="lightblue2">#223399</color>
+    <color name="darkblue">#222299 </color>
+
+    <color name="colorGray">#50000000</color>
+    <color name="whitegray">#dcdcdc</color><!--白灰-->
+
+    <color name="main_background">#3F3C4F</color>
+    <color name="horizontal_line">#e5e5e5</color><!-- 登录分界线 -->
+    <color name="press_on">#80000000</color><!-- HOME——tab按住颜色 -->
+    <color name="title_background">#33A1C9</color><!-- HOME——work公司背景色 -->
+
+    <color name="identify_background">#F1F1F1</color><!-- HOME——work_choose主页面布局区别背景色 -->
+    <color name="identify_wordcolor">#898989</color><!-- HOME——work_choose主页面布局区别字体色 -->
+
+    <color name="transparent">#00000000</color>
+    <!-- myspinner -->
+    <color name="light_gray">#edecec</color>
+
+    <!--superEditText-->
+    <color name="lineColor_click">#1296db</color>
+    <color name="lineColor_unclick">#9b9b9b</color>
+</resources>

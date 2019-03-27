@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/ptz"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ptz_base_map" />
+
+            <TextView
+                android:id="@+id/btn_to_up"
+                android:layout_width="@dimen/dp60"
+                android:layout_height="@dimen/dp60"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/btn_to_down"
+                android:layout_width="@dimen/dp60"
+                android:layout_height="@dimen/dp60"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/btn_to_left"
+                android:layout_width="@dimen/dp60"
+                android:layout_height="@dimen/dp60"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/btn_to_right"
+                android:layout_width="@dimen/dp60"
+                android:layout_height="@dimen/dp60"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/ptz_close"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp10"
+        android:src="@drawable/ptz_false_press_off"
+        />
+
+
+
+    <ImageView
+        android:id="@+id/zoom_in"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp10"
+        android:src="@drawable/ptz_zoomin_press_off" />
+
+    <TextView
+        android:id="@+id/btn_to_zoomin"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp10" />
+
+    <ImageView
+        android:id="@+id/zoom_out"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/zoom_in"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp20"
+        android:src="@drawable/ptz_zoomout_press_off" />
+
+    <TextView
+        android:id="@+id/btn_to_zoomout"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/zoom_in"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp20" />
+
+</RelativeLayout>

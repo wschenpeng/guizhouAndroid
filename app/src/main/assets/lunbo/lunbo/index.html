@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			#list{
+				width: 100%;
+				
+				background-color: yellow;
+				padding: 0;
+				position: relative;
+
+			}
+			#list>li{
+				width: 100%;
+				height: 100%;
+				list-style: none;
+				line-height: 300px;
+				text-align: center;
+				position: absolute;
+			}
+			.box{
+				width: 200px;
+				height: 200px;
+				background-color: #000000;
+				margin: auto;
+			}
+			.box_footer{
+				width: 500px;
+				margin: auto;
+				display: flex;
+				justify-content: space-around;
+				
+			}
+			.box_footer>div{
+				width: 200px;
+				height: 50px;
+				line-height: 50px;
+				text-align: center;
+				border: 1px solid #1E90FF;
+			}
+			img{
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="list">
+			<li class="red"><img src="imgs/1.jpg"/></li>
+			<li class="green"><img src="imgs/2.jpg"/></li>
+			<li class="blue"><img src="imgs/3.jpg"/></li>
+			<li class="purple"><img src="imgs/4.jpg"/></li>
+			<li class="pink"><img src="imgs/5.jpg"/></li>
+		</ul>
+		<!--<div class="box"></div>-->
+		<script src="JQ.js"></script>
+		<script type="text/javascript">
+			//延迟加载函数
+			var height=window.screen.height/3;  ;
+			console.log(height)
+			var list = document.getElementById("list")
+			var box = document.getElementsByClassName("box")[0];
+			var index = list.children.length-1;
+			var box_children = list.children.length-1;
+			var previous = document.getElementsByClassName("previous")[0];
+			var next = document.getElementsByClassName("next")[0];
+			list.style.height=height+"px";
+//			var set = setTimeout(function(){
+//				console.log("延迟一秒执行函数");
+//				box.style.backgroundColor="darkgoldenrod"
+//			},5000);
+//			倒计时函数
+
+			function set(){
+				console.log(box_children);
+				if(box_children>=0&&box_children<5){
+					for(var i = 0;i<list.children.length;i++){
+						list.children[i].style.display= "none"
+					}
+					console.log(box_children);
+					list.children[box_children].style.display = "block"
+					box_children++;
+				}
+				if(box_children==-1){
+					box_children=index;
+				}
+				if(box_children==5){
+					box_children=0;
+				}
+				
+			}
+			var setint = setInterval(set,2000)
+			//点击下一张
+			function next1(){
+				console.log(box_children)
+				if(box_children>=index){
+					box_children=0;
+				}else if(box_children<5){
+					box_children++;
+				}
+				for(var i = 0;i<list.children.length;i++){
+						list.children[i].style.display= "none"
+					}
+				console.log(box_children);
+				list.children[box_children].style.display = "block"
+			}
+			//点击上一张
+			function privious1(){
+				console.log(box_children);
+				if(box_children<=0){
+					box_children=4;
+				}else if(box_children<5){
+					box_children--;
+				}
+				for(var i = 0;i<list.children.length;i++){
+						list.children[i].style.display= "none"
+					}
+				console.log(box_children);
+				list.children[box_children].style.display = "block"
+			}
+		</script>
+	</body>
+</html>

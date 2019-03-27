@@ -1,0 +1,41 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_gk"
+    >
+    <!-- titlebar 标题 -->
+    <RelativeLayout
+        android:id="@+id/titlebar"
+        style="@style/mainTitle"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="100dp"
+            android:layout_height="fill_parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/icon_back_round" />
+
+        <TextView
+            android:id="@+id/video_set"
+            android:layout_width="@dimen/dp100"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            />
+    </RelativeLayout>
+    <!-- 网络配置-->
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/paraset"
+        />
+</LinearLayout>

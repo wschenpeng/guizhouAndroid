@@ -1,0 +1,128 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.example.wzy.guizhouandroid"
+        minSdkVersion 21
+        targetSdkVersion 27
+        versionCode 2
+        versionName "1.1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            assets.srcDirs = ['src/main/assets', 'src/main/assets/']
+        }
+    }
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'x86', 'armeabi-v7a', 'x86_64'
+            universalApk true
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    /**
+     * Bootstrap
+     **/
+    compile 'com.beardedhen:androidbootstrap:2.3.1'
+
+    /**
+     * 圆形图片
+     * */
+    compile 'com.makeramen:roundedimageview:2.2.1'
+
+    /**
+     * 海康威视
+     * */
+    compile files('libs/jna.jar')
+    compile files('libs/HCNetSDK.jar')
+
+    /**
+     * 二维码
+     * */
+    compile 'com.google.zxing:core:3.2.1'
+    compile 'com.journeyapps:zxing-android-embedded:3.0.2@aar'
+
+    /**
+     * hello—charts
+     * */
+    compile 'com.github.lecho:hellocharts-library:1.5.8@aar'
+
+    /**
+     * 下载更新
+     * GitHub：https://github.com/zzmgoing/DownLoadAndInstallAPP
+     * */
+    compile 'com.github.maning0303:MNUpdateAPK:V2.0.3'
+    compile 'com.android.support:multidex:1.0.3'
+    compile 'com.jakewharton.rxbinding:rxbinding:0.4.0'
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.8.0@aar'
+
+    /**
+     * NiceSpinner *
+     * https://github.com/arcadefire/nice-spinner
+     * */
+    compile 'com.github.arcadefire:nice-spinner:1.3.1'
+
+    /**
+     * searchablespinner
+     * https://github.com/michaelprimez/searchablespinner
+     * */
+    implementation 'gr.escsoft.michaelprimez.searchablespinner:SearchableSpinner:1.0.9'
+
+    /**
+     * glide 图片加载
+     * */
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+
+    /**
+     * 动态权限申请库
+     * https://github.com/googlesamples/easypermissions
+     * */
+    implementation 'pub.devrel:easypermissions:1.3.0'
+    /**Picasso 图片加载*/
+//    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    /**
+     * FAB按钮
+     * https://github.com/futuresimple/android-floating-action-button
+     * */
+    implementation 'com.getbase:floatingactionbutton:1.10.1'
+
+    /*由于依赖包冲突添加*/
+    androidTestCompile('com.android.support:support-annotations:27.1.1') {
+        force = true
+    }
+}
